@@ -1,0 +1,152 @@
+.header {
+  font-weight: bolder;
+  color: #128c7e;
+  height: auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* color: rgb(5, 109, 5); */
+}
+.header h1 {
+  /* margin: 0; */
+  margin-top: 10px;
+  font-size: 100px;
+}
+/* typing animation */
+.h3 {
+  font-size: 35px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-right: 0.1em; /* Small buffer to prevent cutoff */
+  animation: typing 2s steps(20) infinite alternate-reverse;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% + 0.1em); /* Extend slightly beyond 100% */
+  }
+}
+
+.header button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(125, 229, 125); /* Changed to green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.header button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 50px auto;
+  /* padding: 20px; */
+}
+
+.container.left {
+  flex-direction: row;
+}
+
+.container.right {
+  flex-direction: row-reverse;
+}
+
+.iphone {
+  width: 500px;
+  height: 500px;
+  display: block;
+}
+
+.text-box {
+  max-width: 300px;
+  text-align: left;
+}
+
+.infobox {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .text-box {
+    text-align: center;
+  }
+
+  .iphone {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Add to your existing home.css file */
+
+/* Base styles for fade-in containers */
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Left container specific animation */
+.container.left {
+  transform: translateY(20px) translateX(-20px);
+}
+
+/* Right container specific animation */
+.container.right {
+  transform: translateY(20px) translateX(20px);
+}
+
+/* Observer callback class that gets added when element becomes visible */
+.container.fade-in {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Staggered delay for sequential containers */
+.container:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.container:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.container:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.container:nth-child(5) {
+  transition-delay: 0.4s;
+}
+.container:nth-child(6) {
+  transition-delay: 0.5s;
+}
+.container:nth-child(7) {
+  transition-delay: 0.6s;
+}

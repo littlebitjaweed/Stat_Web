@@ -1,0 +1,21 @@
+
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+
+# Dependency directories
+node_modules/
+dist/
+build/
+*.egg-info/
+.eggs/

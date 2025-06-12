@@ -190,14 +190,18 @@
     </footer>
     <!-- footer ends here -->
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const mobileNavLinks = document.getElementById("mobile-nav-links");
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const mobileNavLinks = document.getElementById("mobile-menu");
 
+    if (hamburger && mobileNavLinks) {
       hamburger.addEventListener("click", () => {
         mobileNavLinks.classList.toggle("hidden");
       });
-    </script>
+    }
+  });
+</script>
 
     {% block extra_js %} {% endblock%} {% if debug %}
     <script src="http://localhost:8000/__reload__/reload.js"></script>

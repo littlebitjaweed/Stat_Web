@@ -1,254 +1,285 @@
-*{
-    font-family: "Montserrat", sans-serif;
+* {
+  font-family: "Montserrat", sans-serif !important;
 }
 html {
-    zoom: 0.9; /* Adjust to your preferred zoom level */
+  zoom: 0.7;
 }
-body {
-    margin: 0;
-    min-height: 100vh;
-    color: black;
-    padding-top: 60px;
-    overflow-x: hidden;
-    background-color: #ffffff;
-    background-image: 
-        linear-gradient(30deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-        linear-gradient(150deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-        linear-gradient(30deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-        linear-gradient(150deg, #f8f8f8 12%, transparent 12.5%, transparent 87%, #f8f8f8 87.5%, #f8f8f8),
-        linear-gradient(60deg, #f0f0f0 25%, transparent 25.5%, transparent 75%, #f0f0f0 75%, #f0f0f0),
-        linear-gradient(60deg, #f0f0f0 25%, transparent 25.5%, transparent 75%, #f0f0f0 75%, #f0f0f0);
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
 }
-.dark-mode {
-    color: white !important;
-    background-color: #121212 !important;
-    background-image: 
-        linear-gradient(30deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(150deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(30deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(150deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
-        linear-gradient(60deg, #151515 25%, transparent 25.5%, transparent 75%, #151515 75%, #151515),
-        linear-gradient(60deg, #151515 25%, transparent 25.5%, transparent 75%, #151515 75%, #151515);
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+#content {
+  animation: fadeIn 0.5s ease-out;
 }
 
-.dark-mode .navbar, 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Content fade-out */
+.fade-out #content {
+  animation: fadeOut 0.3s ease-in;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+/* Default (Light Mode) */
+:root {
+  --color: rgba(114, 114, 114, 0.3);
+  --bg-color: #ffffff;
+  --grid-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Apply the variables */
+body {
+  color: #128c7e;
+  padding-top: 70px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(0deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+}
+
+.dark-mode {
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+}
+.dark-mode .navbar,
 .dark-mode .footer {
-    background-color: #121212; /* Dark background */
-    color: black; /* Light text */
+  color: white !important; /* Light text */
 }
 
 .dark-mode .navbar a.nav-link {
-    color: black !important; /* Make links visible */
+  color: black !important; /* Make links visible */
 }
 
 .dark-mode .navbar a.nav-link:hover {
-    color: #f1c40f !important; /* Highlight effect */
+  color: #f1c40f !important; /* Highlight effect */
 }
-.darkmodebutton{
-    margin-top: 8px;
-    background: transparent;
-    padding: 0;
-    border: none;
-    font-weight: 100;
+.darkmodebutton {
+  margin-top: 8px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-weight: 100;
 }
-
 
 section {
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* navbar */
 .navbar {
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1100;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar-brand {
-    color: #00ff6a;
-    text-shadow: 2px 2px 5px rgba(0, 255, 106, 0.6);
+  color: #00ff6a;
+  text-shadow: 2px 2px 5px rgba(0, 255, 106, 0.6);
 }
 
 .navbar-links {
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
 }
 
 .navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: #00ff6a;
-    border-radius: 2px;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #00ff6a;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: #00ff6a;
-    transform: translateY(-2px);
+  color: #00ff6a;
+  transform: translateY(-2px);
 }
 
 .navbar-links a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* hero section */
 .hero {
-    text-align: center;
-    color: #00ff6a;
-    text-shadow: 2px 2px 6px rgba(0, 255, 106, 0.5);
+  text-align: center;
+  color: #00ff6a;
+  text-shadow: 2px 2px 6px rgba(0, 255, 106, 0.5);
 }
 
 .hero .h1 {
-    font-size: 4rem;
-    margin: 0.5em 0;
+  font-size: 4rem;
+  margin: 0.5em 0;
 }
 
 .hero .h3 {
-    font-size: 2rem;
-    margin-bottom: 1em;
+  font-size: 2rem;
+  margin-bottom: 1em;
 }
 
 .button {
-    background: #00ff6a;
-    color: #000;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 255, 106, 0.5);
+  background: #00ff6a;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 106, 0.5);
 }
 
 .button:hover {
-    background: #00cc55;
-    transform: translateY(-3px);
+  background: #00cc55;
+  transform: translateY(-3px);
 }
 
 /* about us page */
 .info-box {
-    display: block;
-    color: white;
-    position: absolute;
-    z-index: 100;
-    font-size: 3rem;
-    left: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 300px;
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid #00ff6a;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    opacity: 0;
+  display: block;
+  color: white;
+  position: absolute;
+  z-index: 100;
+  font-size: 3rem;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 300px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ff6a;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .info-box:hover {
-    opacity: 1;
-    transform: translateY(-55%);
+  opacity: 1;
+  transform: translateY(-55%);
 }
 
 /* Section specific styles */
 section:first-of-type {
-    height: 100vh;
-    min-height: 500px;
+  height: 100vh;
+  min-height: 500px;
 }
 
 section:nth-of-type(2) {
-    height: 100vh;
+  height: 100vh;
 }
 
 /* footer fixed to the bottom  */
 
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .footer {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .footer {
-    background-color: #e70000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    z-index: 1000;
-    width: 100vw;
+  background-color: #e70000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
 }
 
 .footer a {
-    color: #00ff88;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #00ff88;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer a:hover {
-    color: #00cc66;
+  color: #00cc66;
 }
 
-.footer-content p, .footer-content .footer-links {
-    margin: 5px 0;
+.footer-content p,
+.footer-content .footer-links {
+  margin: 5px 0;
 }
 /*sticky footer */
 main {
-    flex: 1;
+  flex: 1;
 }
 
 footer {
-    margin-top: auto;
+  margin-top: auto;
 }

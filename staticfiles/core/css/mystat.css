@@ -1,158 +1,185 @@
-/* General Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mystat-countdown {
+    @apply text-4xl font-bold text-white;
+  }
+
+  .image-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .bg-gradient-custom {
+    @apply bg-gradient-slate-emerald min-h-screen w-full;
+  }
+}
+
+/* Custom styles that can't be achieved with Tailwind */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+  background-color: #000000;
+}
+.mystat-countdown {
+  position: relative;
+  z-index: 20;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.mystat-countdown-inner {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ef4444;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.mystat-countdown h3 {
+  color: #ef4444;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+.mystat-countdown #countdown-timer {
+  color: #ef4444;
+  font-weight: 800;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+@media (min-width: 640px) {
+  .mystat-countdown {
+    margin: 2.5rem auto;
+    padding: 0 2rem;
   }
-  
-  /* Header Section */
-  .header {
-    text-align: center;
-    padding: 20px;
-    margin-top: 100px;
+  .mystat-countdown-inner {
+    padding: 1.25rem;
   }
-  
-  .header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+  .mystat-countdown h3 {
+    font-size: 1.5rem;
   }
-  
-  .header p {
-    margin: 5px 0 0;
-    font-size: 1.2rem;
-  }
-  
-  /* Carousel Container */
-  .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px auto;
-  }
-  
-  /* Phone Frame */
-  .phone-frame {
-    position: relative;
-    width: 300px; /* Fixed width for phone frame */
-    height: 600px; /* Fixed height for phone frame */
-    border: 16px solid #000;
-    border-radius: 36px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    background-color: #000;
-  }
-  
-  /* Notch */
-  .notch {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 5px;
-    z-index: 2;
-  }
-  
-  /* Carousel */
-  .carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  /* Cards Container */
-  .cards {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  /* Individual Card */
-  .card {
-    flex: 1 0 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  /* Peekaboo Effect */
-  .cards:hover .card:not(:hover) {
-    opacity: 0.5;
-  }
-  
-  /* Auto-Slide Animation */
-  @keyframes slide {
-    0%, 100% { transform: translateX(0%); }
-    33.33% { transform: translateX(-100%); }
-    66.66% { transform: translateX(-200%); }
-  }
-  
-  .cards {
-    animation: slide 9s infinite;
-  }
-  
-/* General Info Section */
-.info-section {
-    max-width: 1000px;
-    margin: 100px auto; /* Centers the section and adds space from the top */
-    padding: 40px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 40px; /* Space between text and features */
-  }
-  
-  .info-content {
-    flex: 1; /* Makes the text section take half the space */
-    text-align: left;
-    padding: 20px;
-  }
-  
-  .info-content h2 {
+  .mystat-countdown #countdown-timer {
     font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
   }
-  
-  .info-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .mystat-countdown {
+    margin: 3rem auto;
   }
-  
-  .features-list {
-    padding-top: 12px;
-    flex: 1; /* Makes the features take the other half of the space */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  .mystat-countdown h3 {
+    font-size: 1.75rem;
   }
-  
-  .features-list li {
-    font-size: 1.1rem;
-    color: #444;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  .mystat-countdown #countdown-timer {
+    font-size: 2.25rem;
   }
-  
-  .features-list li::before {
-    content: "✔";
-    color: #4CAF50;
-    font-weight: bold;
+}
+
+/* Grid Styles */
+.image-grid {
+  position: relative;
+  z-index: 10;
+  background-color: #000000;
+  padding: 2rem 0;
+}
+.image-grid-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.image-grid-item {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+}
+.image-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-gradient-custom {
+  background: linear-gradient(to right, #18181b, #334155);
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Phone Section Layout */
+.phone-container-section {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-frame {
+  width: 220px;
+  height: 440px;
+  background: rgb(19, 18, 18);
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-screen {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeCycle 9s infinite;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-screen-1 {
+  animation-delay: 0s;
+}
+.fade-screen-2 {
+  animation-delay: 3s;
+}
+.fade-screen-3 {
+  animation-delay: 6s;
+}
+
+@keyframes fadeCycle {
+  0% {
+    opacity: 0;
   }
-  
+  5% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

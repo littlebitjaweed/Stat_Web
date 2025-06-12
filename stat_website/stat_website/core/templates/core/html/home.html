@@ -14,14 +14,11 @@
 </style>
 {% endblock %} {% block content %}
 
-<div
-  class="relative flex h-screen w-full items-center justify-center bg-cover bg-center"
-  style="background-image: url('https://images.unsplash.com/photo-1632380148925-ff9f845087f8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
->
+<div class="relative flex h-screen w-full items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1632380148925-ff9f845087f8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
   <!-- Masking the background with a subtle blur effect using both Tailwind and backup CSS -->
-  <div class="absolute inset-0 z-0 bg-black/30 backdrop-blur-sm backdrop-blur-custom" style="pointer-events: none"></div>
+  <div class="backdrop-blur-custom absolute inset-0 z-0 bg-black/30 backdrop-blur-sm" style="pointer-events: none"></div>
 
-  <div class="z-10 text-center relative">
+  <div class="relative z-10 text-center">
     <h1 class="mb-6 text-center text-6xl font-medium text-white">
       Your Games. Your Rules. <br />
       <span class="block italic underline">Your Stats.</span>
@@ -32,12 +29,12 @@
 
 <div class="flex flex-col items-center justify-center bg-black">
   <div class="text-center text-white">
-    <h1 class="p-8 text-4xl font-medium sm:text-5xl md:text-6xl lg:text-7xl">Why MyStat?</h1>
-    <p class="mt-0 text-xl font-light sm:text-2xl md:text-3xl lg:text-4xl">Welcome to MyStat - Your All-in-One Athletic Companion.</p>
+    <h1 class="p-8 text-4xl font-medium sm:text-5xl md:text-6xl lg:text-7xl">Why Upstra?</h1>
+    <p class="mt-0 text-xl font-light sm:text-2xl md:text-3xl lg:text-4xl">Welcome to Upstra - Your All-in-One Athletic Companion.</p>
   </div>
   <!-- Cards begin here -->
   <div class="flex flex-col gap-y-8">
-    <div class="transition-transform transform hover:scale-105 mx-auto mt-8 w-full max-w-screen-sm rounded-3xl bg-gradient-to-r from-slate-900 to-emerald-500 p-8 font-light text-white shadow-lg">
+    <div class="mx-auto mt-8 w-full max-w-screen-sm transform rounded-3xl bg-gradient-to-r from-slate-900 to-emerald-500 p-8 font-light text-white shadow-lg transition-transform hover:scale-105">
       <div class="flex flex-col items-center justify-between gap-6 md:max-w-2xl md:flex-row">
         <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
           <h2 class="text-2xl font-bold text-white">Smarter Recruitment</h2>
@@ -47,22 +44,18 @@
           <h2 class="text-2xl font-bold">Simplified Management</h2>
           <p class="mt-2 text-sm">No more juggling spreadsheets. From staff payroll to athlete tuition tracking, we're bringing everything you need into one smooth experience.</p>
         </div>
-        <div class="flex justify-center w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1722351690065-210079a0a82c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JpY2tldCUyMHBsYXllcnxlbnwwfHwwfHx8MA%3D%3D"
-            alt="Cricket"
-            class="w-60 h-60 rounded-4xl"
-          />
+        <div class="flex w-full flex-1 justify-center text-center sm:w-1/2 md:w-1/3 md:text-left">
+          <img src="https://plus.unsplash.com/premium_photo-1722351690065-210079a0a82c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JpY2tldCUyMHBsYXllcnxlbnwwfHwwfHx8MA%3D%3D" alt="Cricket" class="h-60 w-60 rounded-4xl" />
         </div>
       </div>
     </div>
 
     <!-- Rest of the content remains the same -->
     <!-- Card 2 -->
-    <div class="transition-transform transform hover:scale-105 mx-auto mt-8 w-full max-w-screen-sm rounded-3xl bg-gradient-to-r from-emerald-500 to-slate-900 p-8 font-light text-white shadow-lg sm:mx-auto">
+    <div class="mx-auto mt-8 w-full max-w-screen-sm transform rounded-3xl bg-gradient-to-r from-emerald-500 to-slate-900 p-8 font-light text-white shadow-lg transition-transform hover:scale-105 sm:mx-auto">
       <div class="flex flex-col items-center justify-between gap-6 md:max-w-2xl md:flex-row">
-        <div class="flex justify-center w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-          <img src="https://images.pexels.com/photos/13633979/pexels-photo-13633979.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cricket" class="rounded-3xl object-cover w-60 h-60" />
+        <div class="flex w-full flex-1 justify-center text-center sm:w-1/2 md:w-1/3 md:text-left">
+          <img src="https://images.pexels.com/photos/13633979/pexels-photo-13633979.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cricket" class="h-60 w-60 rounded-3xl object-cover" />
         </div>
         <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
           <h2 class="text-2xl font-bold text-white">Automated Performance Tracking</h2>
@@ -74,7 +67,7 @@
         </div>
       </div>
     </div>
-    <div class="transition-transform transform hover:scale-105 mx-auto mt-8 w-full max-w-screen-sm rounded-3xl bg-gradient-to-r from-slate-900 to-emerald-500 p-8 font-light text-white shadow-lg">
+    <div class="mx-auto mt-8 w-full max-w-screen-sm transform rounded-3xl bg-gradient-to-r from-slate-900 to-emerald-500 p-8 font-light text-white shadow-lg transition-transform hover:scale-105">
       <div class="flex flex-col items-center justify-between gap-6 md:max-w-2xl md:flex-row">
         <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
           <h2 class="text-2xl font-bold text-white">Personalized Profile Management</h2>
@@ -84,86 +77,90 @@
           <h2 class="text-2xl font-bold">Ground Mapping & Strategy Tools</h2>
           <p class="mt-2 text-sm">From booking venues to planning strategies in real time, we're bringing smart tools to your fingertips so you can focus on the game.</p>
         </div>
-        <div class="flex justify-center w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-          <img src="https://images.pexels.com/photos/3131406/pexels-photo-3131406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cricket" class="object-cover rounded-2xl w-60 h-60 md:mx-auto sm:mx-auto" />
+        <div class="flex w-full flex-1 justify-center text-center sm:w-1/2 md:w-1/3 md:text-left">
+          <img src="https://images.pexels.com/photos/3131406/pexels-photo-3131406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cricket" class="h-60 w-60 rounded-2xl object-cover sm:mx-auto md:mx-auto" />
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Card 1 - MyStat / Club Connect -->
-  <h1 class="text-white items-center pt-8 mt-10 font-semibold text-4xl">Products</h1>
-  <div class="mx-5 flex flex-col gap-4 mt-10 font-light sm:flex-row">
-    <div class="relative flex-1 h-80 rounded-2xl overflow-hidden transition-transform transform-200 hover:scale-105">
-      <img src="https://images.pexels.com/photos/1103969/pexels-photo-1103969.jpeg?auto=compress&cs=tinysrgb&w=600" alt="MyStat" class="w-full h-full object-cover rounded-2xl" />
-      <div class="absolute inset-0 bg-gradient-to-t from-amber-800/80 to-transparent flex flex-col justify-end p-6">
-        <h2 class="text-white text-2xl font-bold mb-2">MyStat</h2>
-        <p class="text-white text-sm mb-3">Stay in sync with your club—real-time updates, events, and more.</p>
+  <!-- Card 1 - Upstra / Club Connect -->
+  <h1 class="mt-10 items-center pt-8 text-4xl font-semibold text-white">Products</h1>
+  <div class="mx-5 mt-10 flex flex-col gap-4 font-light sm:flex-row">
+    <div class="transform-200 relative h-80 flex-1 overflow-hidden rounded-2xl transition-transform hover:scale-105">
+      <img src="https://images.pexels.com/photos/1103969/pexels-photo-1103969.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Upstra" class="h-full w-full rounded-2xl object-cover" />
+      <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-amber-800/80 to-transparent p-6">
+        <a href="{% url 'mystat'%}">
+          <h2 class="mb-2 text-2xl font-bold text-white">Upstra</h2>
+          <p class="mb-3 text-sm text-white">Stay in sync with your club—real-time updates, events, and more.</p>
+        </a>
       </div>
     </div>
 
     <!-- Card 2 - Cerebro / Performance Stats -->
-    <div class="relative flex-1 h-80 rounded-2xl overflow-hidden transition-transform transform-200 hover:scale-105">
-      <img src="https://images.pexels.com/photos/9251066/pexels-photo-9251066.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Cerebro" class="w-full h-full object-cover rounded-2xl" />
-      <div class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex flex-col justify-end p-6">
-        <h2 class="text-white text-2xl font-bold mb-2">Cerebro</h2>
-        <p class="text-white text-sm mb-3">Track your sessions and see your growth over time.</p>
+    <div class="transform-200 relative h-80 flex-1 overflow-hidden rounded-2xl transition-transform hover:scale-105">
+      <img src="https://images.pexels.com/photos/9251066/pexels-photo-9251066.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Cerebro" class="h-full w-full rounded-2xl object-cover" />
+      <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-amber-900/80 to-transparent p-6">
+        <a href="{% url 'mycerebro'%}"
+            ><h2 class="mb-2 text-2xl font-bold text-white">Upstra Partner</h2>
+          <p class="mb-3 text-sm text-white">Track your sessions and see your growth over time.</p>
+        </a>
       </div>
     </div>
 
     <!-- Card 3 - Neuron / Feed -->
-    <div class="relative flex-1 h-80 rounded-2xl overflow-hidden transition-transform transform-200 hover:scale-105">
+    <!-- <div class="relative flex-1 h-80 rounded-2xl overflow-hidden transition-transform transform-200 hover:scale-105">
       <img src="https://images.pexels.com/photos/27798335/pexels-photo-27798335/free-photo-of-a-large-white-building-with-a-large-roof.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Feed" class="w-full h-full object-cover rounded-2xl" />
       <div class="absolute inset-0 bg-gradient-to-t from-amber-950/80 to-transparent flex flex-col justify-end p-6">
         <h2 class="text-white text-2xl font-bold mb-2">Neuron</h2>
         <p class="text-white text-sm mb-3">See what's happening around you. Share moments, celebrate together.</p>
       </div>
-    </div>
+    </div>-->
   </div>
 
   <!-- Our Goals Section -->
-  <div class="flex flex-col items-center justify-center py-16 px-6 text-white">
-    <div class="max-w-4xl text-center mb-12">
-      <h1 class="text-4xl sm:text-5xl font-semibold mb-8">Our Goals (Yes, We've Got Plenty like our Aims – Pun Intended)</h1>
-      <p class="text-lg sm:text-xl font-light leading-relaxed">At <span class="font-semibold">MyStat</span>, we're not just building a platform—we're building a movement.</p>
+  <div class="flex flex-col items-center justify-center px-6 py-16 text-white">
+    <div class="mb-12 max-w-4xl text-center">
+      <h1 class="mb-8 text-4xl font-semibold sm:text-5xl">Our Goals (Yes, We've Got Plenty like our Aims – Pun Intended)</h1>
+      <p class="text-lg leading-relaxed font-light sm:text-xl">At <span class="font-semibold">Upstra</span>, we're not just building a platform—we're building a movement.</p>
     </div>
 
     <!-- Goal Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-screen-xl">
+    <div class="grid w-full max-w-screen-xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Goal 1 -->
-      <div class="transition-transform transform hover:scale-105 bg-gradient-to-r from-cyan-500 to-slate-800 rounded-3xl p-8 shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Empowerment Through Data</h3>
-        <p class="text-sm sm:text-base font-light">We want to empower athletes, coaches, and teams with the right data and insights to unlock their full potential.</p>
+      <div class="transform rounded-3xl bg-gradient-to-r from-cyan-500 to-slate-800 p-8 text-center shadow-lg transition-transform hover:scale-105">
+        <h3 class="mb-4 text-2xl font-semibold">Empowerment Through Data</h3>
+        <p class="text-sm font-light sm:text-base">We want to empower athletes, coaches, and teams with the right data and insights to unlock their full potential.</p>
       </div>
 
       <!-- Goal 2 -->
-      <div class="transition-transform transform hover:scale-105 bg-gradient-to-r from-slate-800 to-cyan-500 rounded-3xl p-8 shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Connect the Community</h3>
-        <p class="text-sm sm:text-base font-light">Our platform is designed to bring everyone in the sports ecosystem closer together, with seamless communication tools.</p>
+      <div class="transform rounded-3xl bg-gradient-to-r from-slate-800 to-cyan-500 p-8 text-center shadow-lg transition-transform hover:scale-105">
+        <h3 class="mb-4 text-2xl font-semibold">Connect the Community</h3>
+        <p class="text-sm font-light sm:text-base">Our platform is designed to bring everyone in the sports ecosystem closer together, with seamless communication tools.</p>
       </div>
 
       <!-- Goal 3 -->
-      <div class="transition-transform transform hover:scale-105 bg-gradient-to-r from-cyan-500 to-slate-800 rounded-3xl p-8 shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Track Progress, Celebrate Achievements</h3>
-        <p class="text-sm sm:text-base font-light">Celebrate every milestone, no matter how big or small, with real-time tracking and achievement sharing.</p>
+      <div class="transform rounded-3xl bg-gradient-to-r from-cyan-500 to-slate-800 p-8 text-center shadow-lg transition-transform hover:scale-105">
+        <h3 class="mb-4 text-2xl font-semibold">Track Progress, Celebrate Achievements</h3>
+        <p class="text-sm font-light sm:text-base">Celebrate every milestone, no matter how big or small, with real-time tracking and achievement sharing.</p>
       </div>
 
       <!-- Goal 4 -->
-      <div class="transition-transform transform hover:scale-105 bg-gradient-to-r from-slate-800 to-cyan-500 rounded-3xl p-8 shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Simplify Team Management</h3>
-        <p class="text-sm sm:text-base font-light">Streamline team management, from scheduling to performance reviews, all in one place—no more scattered tools.</p>
+      <div class="transform rounded-3xl bg-gradient-to-r from-slate-800 to-cyan-500 p-8 text-center shadow-lg transition-transform hover:scale-105">
+        <h3 class="mb-4 text-2xl font-semibold">Simplify Team Management</h3>
+        <p class="text-sm font-light sm:text-base">Streamline team management, from scheduling to performance reviews, all in one place—no more scattered tools.</p>
       </div>
 
       <!-- Goal 5 -->
-      <div class="transition-transform transform hover:scale-105 bg-gradient-to-r from-cyan-500 to-slate-800 rounded-3xl p-8 shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Build Lasting Relationships</h3>
-        <p class="text-sm sm:text-base font-light">We aim to help players and teams build strong, lasting relationships both on and off the field.</p>
+      <div class="transform rounded-3xl bg-gradient-to-r from-cyan-500 to-slate-800 p-8 text-center shadow-lg transition-transform hover:scale-105">
+        <h3 class="mb-4 text-2xl font-semibold">Build Lasting Relationships</h3>
+        <p class="text-sm font-light sm:text-base">We aim to help players and teams build strong, lasting relationships both on and off the field.</p>
       </div>
 
       <!-- Goal 6 -->
-      <div class="transition-transform transform hover:scale-105 bg-gradient-to-r from-slate-800 to-cyan-500 rounded-3xl p-8 shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Create Sponsorship Opportunities</h3>
-        <p class="text-sm sm:text-base font-light">Our goal is to create opportunities for athletes and coaches to gain the recognition and sponsorship they deserve.</p>
+      <div class="transform rounded-3xl bg-gradient-to-r from-slate-800 to-cyan-500 p-8 text-center shadow-lg transition-transform hover:scale-105">
+        <h3 class="mb-4 text-2xl font-semibold">Create Sponsorship Opportunities</h3>
+        <p class="text-sm font-light sm:text-base">Our goal is to create opportunities for athletes and coaches to gain the recognition and sponsorship they deserve.</p>
       </div>
     </div>
   </div>

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/css/mystat.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Background image wrapper -->
+<div class="relative min-h-screen flex items-center justify-center px-4 py-20">
+
+  <!-- Background image layer -->
+  <div class="absolute inset-0 -z-10">
+    <img src="https://images.unsplash.com/photo-1632380148925-ff9f845087f8?q=80&w=1932&auto=format&fit=crop"
+         alt="Contact Background"
+         class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Blur overlay behind form -->
+  <div class="absolute inset-0 bg-black/30 backdrop-blur-md -z-0"></div>
+
+  <!-- Contact form -->
+  <div class="relative z-10 bg-black/60 backdrop-blur-md p-8 rounded-xl shadow-2xl w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center text-white mb-4">Contact Us</h1>
+    <p class="text-white text-center mb-6">
+      We'd love to hear from you. Fill out the form and we'll get back to you shortly.
+    </p>
+
+    <form method="post" class="space-y-5">
+      {% csrf_token %}
+      <div>
+        <label for="name" class="block mb-1 text-sm font-medium text-white">Name</label>
+        <input type="text" id="name" name="name"
+               class="w-full px-4 py-2 bg-transparent border border-gray-500 text-white rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+               required>
+      </div>
+      <div>
+        <label for="email" class="block mb-1 text-sm font-medium text-white">Email</label>
+        <input type="email" id="email" name="email"
+               class="w-full px-4 py-2 bg-transparent border border-gray-500 text-white rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+               required>
+      </div>
+      <div>
+        <label for="message" class="block mb-1 text-sm font-medium text-white">Message</label>
+        <textarea id="message" name="message" rows="4"
+                  class="w-full px-4 py-2 bg-transparent border border-gray-500 text-white rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                  required></textarea>
+      </div>
+      <button type="submit"
+              class="w-full py-2 bg-green-600 hover:bg-green-700 transition-colors text-white font-semibold rounded">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

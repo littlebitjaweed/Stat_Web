@@ -18,15 +18,15 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
-    <nav class="mb-10 absolute top-0 left-0 z-50 w-full bg-transparent px-4 font-light text-white text-shadow-lg/30">
+    <nav class="mb-10 absolute top-0 left-0 z-50 w-full bg-transparent px-2 font-light text-white text-shadow-lg/30">
       <!-- Mobile Navbar -->
       <div class="w-full sm:hidden">
         <div class="flex items-center justify-between py-4">
-          <div class="font-bold">Upstra</div>
+          <div class="font-bold"><a href="{% url 'home' %}"> Upstra </a></div>
           <button id="hamburger" class="text-3xl focus:outline-none">☰</button>
         </div>
         <!-- Mobile dropdown menu (hidden by default) -->
-        <div id="mobile-menu" class="hidden bg-black/70 backdrop-blur-sm rounded-lg mt-2 py-2 px-4">
+        <div id="mobile-menu" class="hidden bg-black rounded-lg shadow-xl">
           <ul class="space-y-3">
             <li>
               <a href="{% url 'mystat' %}" class="block py-2 text-white hover:text-gray-300">Upstra</a>

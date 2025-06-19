@@ -21,7 +21,7 @@
   <!-- Overlay content -->
   <div class="absolute inset-0 flex items-center justify-center text-white text-center z-10 bg-black/40">
     <div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-danger">Upstra</h1>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-red-300">Upstra</h1>
       <p class="mt-4 mx-4 text-lg sm:text-xl font-light">Your personal everyday tool, your digital locker room, and your connection to the entire sports world.</p>
     </div>
   </div>
@@ -39,14 +39,14 @@
 <div class="flex flex-col sm:flex-row gap-4 px-4 items-center justify-between">
   <!-- Text Section -->
   <div class="flex-1 mt-0 sm:mt-0 font-light sm:pr-8">
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-danger">What You Can Do on Upstra</h2>
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-red-300">What You Can Do on Upstra</h2>
     <p class="mb-4 text-2xl text-white">
       We've built Upstra to be more than just an app on your phone—it's your personal everyday tool, your digital locker room, and your connection to the entire sports world. Here's a closer look at what you can do:
     </p>
     <ul class="list-disc pl-5 space-y-2 text-white text-base sm:text-lg lg:text-xl">
-      <li><strong>Club Connect:</strong> Real-time updates from your club so you're always in the loop.</li>
-      <li><strong>Performance Statistics:</strong> Track your growth through practices, fitness, and game-day stats.</li>
-      <li><strong>Connect:</strong> Chat with teammates or meet new athletes and professionals.</li>
+      <li><strong><span class="text-red-300"> Club Connect: </span></strong> Real-time updates from your club so you're always in the loop.</li>
+      <li><strong><span class="text-red-300"> Performance Statistics: </span></strong> Track your growth through practices, fitness, and game-day stats.</li>
+      <li><strong><span class="text-red-300"> Connect: </span></strong> Chat with teammates or meet new athletes and professionals.</li>
     </ul>
   </div>
 
@@ -76,85 +76,163 @@
   </div>
 
   <div class="flex-1 mt-0 sm:mt-0 text-white font-light sm:pl-8">
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-danger">Your Feed</h2>
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-red-300">Your Feed</h2>
     <p class="mb-6 text-base sm:text-lg lg:text-xl text-white">
       Stay in the loop with everything happening around you. Your personalized feed is where updates, highlights, and stories from your circle come to life—one post at a time. Post a photo, drop a video, or just leave a quick note—it's your space to
       connect, express, and celebrate the moments that matter.
     </p>
     <ul class="list-disc pl-5 space-y-4 text-white">
-      <li class="text-base sm:text-lg lg:text-xl"><strong>Connect:</strong> Keep track of your wins—because let's be honest, it's hard to remember them all on your own.</li>
-      <li class="text-base sm:text-lg lg:text-xl"><strong>Achievements:</strong> Celebrate your growth, your hustle, and every proud moment along the way.</li>
-      <li class="text-base sm:text-lg lg:text-xl"><strong>Reviews:</strong> Send good vibes! Drop a thoughtful note to a teammate or fellow athlete. A kind review can go a long way in boosting confidence and bringing a smile to someone.</li>
+      <li class="text-base sm:text-lg lg:text-xl"><strong><span class="text-red-300"> Connect: </span></strong> Keep track of your wins—because let's be honest, it's hard to remember them all on your own.</li>
+      <li class="text-base sm:text-lg lg:text-xl"><strong><span class="text-red-300"> Achievements: </span></strong> Celebrate your growth, your hustle, and every proud moment along the way.</li>
+      <li class="text-base sm:text-lg lg:text-xl"><strong><span class="text-red-300"> Reviews: </span></strong> Send good vibes! Drop a thoughtful note to a teammate or fellow athlete. A kind review can go a long way in boosting confidence and bringing a smile to someone.</li>
     </ul>
   </div>
 </div>
+<!-- How It Works Section -->
+<section class="bg-black text-white py-16 px-6 sm:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-red-300">How It Works</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- Step 1 -->
+      <div class="bg-black rounded-xl p-8 shadow-lg hover:scale-105 transform transition">
+        <div class="flex justify-center mb-6">
+          <div class="bg-red-400 p-4 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.655 6.879 1.804M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold mb-2 text-red-200">Sign Up</h3>
+        <p class="text-base text-gray-300">Create your free Upstra profile and unlock your personal sports dashboard.</p>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="bg-black rounded-xl p-8 shadow-lg hover:scale-105 transform transition">
+        <div class="flex justify-center mb-6">
+          <div class="bg-red-400 p-4 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17 20h5v-2a4 4 0 00-5-3.87M9 12H5.236a2 2 0 00-1.89 2.667l1.528 4.6a2 2 0 001.89 1.333H9m0 0h6m-6 0a2 2 0 100-4h-.5m6.5 4h3.764a2 2 0 001.89-1.333l1.528-4.6A2 2 0 0020.764 12H15" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold mb-2 text-red-200">Join Your Club</h3>
+        <p class="text-base text-gray-300">Connect with your team, stay updated with club news, and sync schedules.</p>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="bg-black rounded-xl p-8 shadow-lg hover:scale-105 transform transition">
+        <div class="flex justify-center mb-6">
+          <div class="bg-red-400 p-4 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold mb-2 text-red-200">Get Started</h3>
+        <p class="text-base text-gray-300">Post highlights, track stats, review teammates — and elevate your game.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Image Grid Section -->
-<div class="image-grid">
-  <div class="image-grid-container">
-    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4">
-      <!-- Grid Item 1 -->
-      <div class="image-grid-item relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105">
-        <img src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Football Stadium" class="w-full h-64 object-cover rounded-2xl" />
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-          <p class="text-white text-xs font-semibold">Football Stadium</p>
+<div class="image-grid px-4 my-10">
+  <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
+    
+    <!-- Grid Item 1 -->
+    <div class="relative rounded-2xl overflow-hidden shadow-lg h-64">
+      <img src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=600"
+           alt="Football Stadium"
+           class="w-full h-full object-cover" />
+      <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 px-4 py-2 rounded-b-2xl">
+        <p class="text-white text-sm font-medium truncate">Track your journey, one stat at a time.</p>
+      </div>
+    </div>
+
+    <!-- Grid Item 2 -->
+    <div class="relative rounded-2xl overflow-hidden shadow-lg h-64">
+      <img src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=600"
+           alt="Football Match"
+           class="w-full h-full object-cover" />
+      <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 px-4 py-2 rounded-b-2xl">
+        <p class="text-white text-sm font-medium truncate">Stay connected with your club and teammates.</p>
+      </div>
+    </div>
+
+    <!-- Grid Item 3 -->
+    <div class="relative rounded-2xl overflow-hidden shadow-lg h-64">
+      <img src="https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&w=600"
+           alt="Football Action"
+           class="w-full h-full object-cover" />
+      <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 px-4 py-2 rounded-b-2xl">
+        <p class="text-white text-sm font-medium truncate">Celebrate every win and moment with your community.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="bg-black text-white px-4 py-12">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-red-300 mb-10">General FAQ</h2>
+
+    <div class="space-y-4">
+      <!-- Question 1 -->
+      <div class="border border-gray-700 rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 focus:outline-none font-semibold text-lg flex justify-between items-center faq-toggle">
+          What is Upstra and who is it for?
+          <span class="text-red-300">+</span>
+        </button>
+        <div class="hidden px-6 pb-4 text-gray-300 faq-answer">
+          Upstra is a social performance platform built for athletes. Whether you're in school, college, or pro-level clubs, Upstra helps you track your stats, engage with your team, and showcase your progress.
         </div>
       </div>
 
-      <!-- Grid Item 2 -->
-      <div class="image-grid-item relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105">
-        <img src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Football Match" class="w-full h-64 object-cover rounded-2xl" />
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-          <p class="text-white text-xs font-semibold">Football Match</p>
+      <!-- Question 2 -->
+      <div class="border border-gray-700 rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 focus:outline-none font-semibold text-lg flex justify-between items-center faq-toggle">
+          Is Upstra free to use?
+          <span class="text-red-300">+</span>
+        </button>
+        <div class="hidden px-6 pb-4 text-gray-300 faq-answer">
+          Yes! Upstra’s core features will always be free for athletes. We may introduce premium tools in the future, but you’ll always have access to your stats and club network at no cost.
         </div>
       </div>
 
-      <!-- Grid Item 3 -->
-      <div class="image-grid-item relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105">
-        <img src="https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Football Action" class="w-full h-64 object-cover rounded-2xl" />
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-          <p class="text-white text-xs font-semibold">Football Action</p>
+      <!-- Question 3 -->
+      <div class="border border-gray-700 rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 focus:outline-none font-semibold text-lg flex justify-between items-center faq-toggle">
+          Can I use Upstra if I'm not part of a club?
+          <span class="text-red-300">+</span>
+        </button>
+        <div class="hidden px-6 pb-4 text-gray-300 faq-answer">
+          Absolutely. Even if you’re not in a formal club, you can track personal stats, share updates, and connect with the sports community around you.
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="border border-gray-700 rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 focus:outline-none font-semibold text-lg flex justify-between items-center faq-toggle">
+          Will my data be visible to others?
+          <span class="text-red-300">+</span>
+        </button>
+        <div class="hidden px-6 pb-4 text-gray-300 faq-answer">
+          You have full control. Share your performance with clubs, teammates, or recruiters—or keep it private. It’s your game, your rules.
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- Text Section -->
-
-<div class="flex flex-col gap-y-8 w-[90%] items-center">
-  <div class="transition-transform transform hover:scale-105 w-[90%] mx-4 md:mx-auto max-w-screen-sm mt-8 rounded-3xl overflow-hidden bg-gradient-to-r from-red-700 to-pink-400">
-    <div class="flex flex-col items-center justify-between gap-6 md:max-w-2xl md:flex-row p-6">
-      <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-        <h2 class="text-2xl font-bold text-white">Track your wins</h2>
-        <p class="mt-2 text-sm text-white">Keep track of your wins—because let's be honest, it's hard to remember them all on your own.</p>
-      </div>
-      <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-        <h2 class="text-2xl font-bold text-white">Milestones</h2>
-        <p class="mt-2 text-sm text-white">Whether it's athletic accomplishments, academic milestones, or personal highlights, your profile is the perfect place to showcase everything that makes you one of a kind.</p>
-      </div>
-      <div class="flex justify-center w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-        <img src="https://plus.unsplash.com/premium_photo-1722351690065-210079a0a82c?w=600&auto=format&fit=crop&q=60" alt="Cricket" class="w-60 h-60 object-cover rounded-2xl" />
-      </div>
-    </div>
-  </div>
-
-<div class="transition-transform transform hover:scale-105 mx-4 md:mx-auto max-w-screen-sm mt-8  rounded-3xl bg-gradient-to-r from-red-700 to-pink-400 p-8 font-light text-white shadow-lg sm:mx-auto mb-10">
-  <div class="flex flex-col items-center justify-between gap-6 md:max-w-2xl md:flex-row">
-    <div class="flex justify-center w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-      <img src="https://images.pexels.com/photos/13633979/pexels-photo-13633979.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cricket" class="rounded-3xl object-cover w-60 h-60" />
-    </div>
-    <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-      <h2 class="text-2xl font-bold text-white">Automated Performance Tracking</h2>
-      <p class="mt-2 text-sm">Get real-time, sport-specific insights that help you (or your team) perform at your best—without the manual work.</p>
-    </div>
-    <div class="w-full flex-1 text-center sm:w-1/2 md:w-1/3 md:text-left">
-      <h2 class="text-2xl font-bold">Sponsorship Opportunities</h2>
-      <p class="mt-2 text-sm">We’re introducing programs to help athletes and coaches get the support they deserve—whether it's funding, gear, or recognition.</p>
-    </div>
-  </div>
-</div>
-</div>
 {% endblock %} {% block extra_js %}
 <script>
   // Set the date we're counting down to
@@ -184,4 +262,24 @@
     }
   }, 1000);
 </script>
+<script>
+  // FAQ Accordion
+  document.querySelectorAll(".faq-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const answer = toggle.nextElementSibling;
+      const icon = toggle.querySelector("span");
+
+      const isOpen = !answer.classList.contains("hidden");
+
+      document.querySelectorAll(".faq-answer").forEach((el) => el.classList.add("hidden"));
+      document.querySelectorAll(".faq-toggle span").forEach((el) => el.textContent = "+");
+
+      if (!isOpen) {
+        answer.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    });
+  });
+</script>
+
 {% endblock %}

@@ -25,8 +25,8 @@
     "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.10"
   },
-  "description": "",
   "dependencies": {
     "@midudev/tailwind-animations": "^0.2.0"
-  }
+  },
+  "description": ""
 }

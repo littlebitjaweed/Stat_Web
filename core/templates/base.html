@@ -1,5 +1,4 @@
 {% load static %}
-{% load static tailwind_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -7,13 +6,11 @@
     <meta name="description" content="Your all in one Sports Social Media App" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upstra</title>
-    {% tailwind_css %}
-    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" /> -->
     <link rel="icon" type="image/x-icon" href="{% static 'core/favicon_io/favicon.ico' %}" />
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
@@ -24,7 +21,7 @@
       }
     }
   }
-</script>
+</script> -->
 
 {% block extra_css %}{% endblock %}
 <script src="{% static 'core/js/base.js' %}"></script>

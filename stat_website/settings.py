@@ -45,12 +45,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'core',
     'django_browser_reload',
-    'tailwind',
-    'theme',
 ]
-TAILWIND_APP_NAME='theme'
 
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -135,9 +131,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Add this if you don't have it already
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

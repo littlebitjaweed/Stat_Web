@@ -26,7 +26,8 @@
     "tailwindcss": "^4.1.10"
   },
   "dependencies": {
-    "@midudev/tailwind-animations": "^0.2.0"
+    "@midudev/tailwind-animations": "^0.2.0",
+    "@tailwindcss/cli": "^4.1.10"
   },
   "description": ""
 }

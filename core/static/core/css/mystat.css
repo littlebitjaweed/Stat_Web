@@ -148,38 +148,27 @@ body {
 
 .screen {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  z-index: 0;
   animation: fadeCycle 9s infinite;
   transition: opacity 1s ease-in-out;
 }
 
-.fade-screen-1 {
-  animation-delay: 0s;
-}
-.fade-screen-2 {
-  animation-delay: 3s;
-}
-.fade-screen-3 {
-  animation-delay: 6s;
-}
+/* Delay for each image in sequence */
+.fade-screen-1 { animation-delay: 0s; }
+.fade-screen-2 { animation-delay: 3s; }
+.fade-screen-3 { animation-delay: 6s; }
 
 @keyframes fadeCycle {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  5% { opacity: 1; z-index: 1; }
+  30% { opacity: 1; z-index: 1; }
+  35% { opacity: 0; z-index: 0; }
+  100% { opacity: 0; z-index: 0; }
 }
+
